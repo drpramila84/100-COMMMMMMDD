@@ -1,0 +1,19 @@
+/**
+ * @namespace: addons/dashboard/register.js
+ * @type: Module
+ * @copyright © 2025 LORD_RAJBHAI
+ * @assistant chaa & graa
+ * @version 0.9.11-beta
+ */
+
+const initializeDashboard = require('./web/server');
+
+module.exports = {
+    async initialize(bot) {
+        const summery = [];
+        initializeDashboard(bot.container.client);
+        summery.push('   └─ 🚀 Initializing Dashboard...');
+
+        return summery;
+    },
+};

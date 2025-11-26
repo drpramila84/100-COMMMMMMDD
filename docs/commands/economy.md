@@ -1,0 +1,149 @@
+## 📁 Command Category: Economy
+
+### 💾 `/eco`
+
+**Description:** 💰 Get your money and become rich
+
+### 💻 Usage
+
+`/eco bank`
+`/eco beg`
+`/eco coin`
+`/eco coinflip <bet> <side>`
+`/eco daily`
+`/eco deposit <type> [amount]`
+`/eco give <target> <amount>`
+`/eco hack <target>`
+`/eco inventory`
+`/eco leaderboard`
+`/eco lootbox`
+`/eco profile [user]`
+`/eco rob <target>`
+`/eco shop`
+`/eco slots <bet>`
+`/eco transfer <target> <amount>`
+`/eco withdraw <amount>`
+`/eco work`
+
+### 🔧 Subcommands
+
+**`/eco bank`**
+> 💰 Check your kythia bank balance and full bank info.
+> _Aliases: `bank`_
+
+
+**`/eco beg`**
+> 💰 Ask for money from server.
+
+
+**`/eco coin`**
+> 💰 Check your kythia coin balance.
+
+
+**`/eco coinflip <bet> <side>`**
+> 🪙 Flip a coin and test your luck.
+
+**Options for this subcommand:**
+- **`bet*`**
+  - **Description:** Amount to bet
+  - **Type:** Integer
+- **`side*`**
+  - **Description:** Heads or Tails
+  - **Type:** Text
+  - **Choices:** `Heads` (`heads`), `Tails` (`tails`)
+**`/eco daily`**
+> 💰 Collect your daily kythia coin.
+> _Aliases: `daily`_
+
+
+**`/eco deposit <type> [<amount>]`**
+> 💰 Deposit your kythia coin into kythia bank.
+
+**Options for this subcommand:**
+- **`type*`**
+  - **Description:** Choose deposit type: all or partial
+  - **Type:** Text
+  - **Choices:** `Deposit All` (`all`), `Deposit Partial` (`partial`)
+- **`amount`**
+  - **Description:** Amount to deposit
+  - **Type:** Integer
+**`/eco give <target> <amount>`**
+> 💰 Give kythia coin to another user.
+
+**Options for this subcommand:**
+- **`target*`**
+  - **Description:** User to give kythia coin to
+  - **Type:** User
+- **`amount*`**
+  - **Description:** Amount of kythia coin to give
+  - **Type:** Integer
+**`/eco hack <target>`**
+> 💵 Hack another user.
+
+**Options for this subcommand:**
+- **`target*`**
+  - **Description:** User you want to hack
+  - **Type:** User
+**`/eco inventory`**
+> 🛄 View all items in your inventory.
+
+
+**`/eco leaderboard`**
+> 🏆 View the global economy leaderboard.
+
+
+**`/eco lootbox`**
+> 🎁 Open a lootbox to get a random reward.
+> _Aliases: `lootbox`_
+
+
+**`/eco profile [<user>]`**
+> 🗃️ View a user's full profile, including level, bank, cash, and more.
+
+**Options for this subcommand:**
+- **`user`**
+  - **Description:** The user whose profile you want to view
+  - **Type:** User
+**`/eco rob <target>`**
+> 💵 Try to rob money from another user.
+
+**Options for this subcommand:**
+- **`target*`**
+  - **Description:** The user you want to rob
+  - **Type:** User
+**`/eco shop`**
+> 🛒 Look and buy items from the shop.
+
+
+**`/eco slots <bet>`**
+> 🎰 Play the Las Kythia slot machine! (Warning: Addictive!)
+> _Cooldown: 20 seconds_
+
+**Options for this subcommand:**
+- **`bet*`**
+  - **Description:** The amount of money to bet
+  - **Type:** Integer
+**`/eco transfer <target> <amount>`**
+> Transfer your money to another user.
+
+**Options for this subcommand:**
+- **`target*`**
+  - **Description:** User to transfer money to
+  - **Type:** User
+- **`amount*`**
+  - **Description:** Amount of money to transfer
+  - **Type:** Integer
+**`/eco withdraw <amount>`**
+> Withdraw your kythia coin from kythia bank.
+
+**Options for this subcommand:**
+- **`amount*`**
+  - **Description:** Amount to withdraw
+  - **Type:** Integer
+**`/eco work`**
+> ⚒️ Work to earn money with various scenarios!
+> _Aliases: `work`_
+
+
+
+

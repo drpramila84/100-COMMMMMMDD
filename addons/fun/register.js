@@ -1,0 +1,25 @@
+/**
+ * @namespace: addons/fun/register.js
+ * @type: Module
+ * @copyright © 2025 LORD_RAJBHAI
+ * @assistant chaa & graa
+ * @version 0.9.11-beta
+ */
+const marryButtonHandler = require('./buttons/marry.js');
+
+const initialize = (bot) => {
+    const summary = [];
+    try {
+        bot.registerButtonHandler('marry', marryButtonHandler.execute);
+
+        summary.push("  └─ Button: 'marry'");
+    } catch (error) {
+        console.error("Failed to register button handler 'marry':", error);
+    }
+
+    return summary;
+};
+
+module.exports = {
+    initialize,
+};

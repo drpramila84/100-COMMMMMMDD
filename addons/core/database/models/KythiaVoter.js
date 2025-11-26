@@ -1,0 +1,34 @@
+/**
+ * @namespace: addons/core/database/models/KythiaVoter.js
+ * @type: Database Model
+ * @copyright © 2025 LORD_RAJBHAI
+ * @assistant chaa & graa
+ * @version 0.9.11-beta
+ */
+
+const { DataTypes } = require('sequelize');
+
+const { KythiaModel } = require('@kenndeclouv/kythia-core');
+
+class KythiaVoter extends KythiaModel {
+    static init(sequelize) {
+        super.init(
+            {
+                userId: { type: DataTypes.STRING, allowNull: false, primaryKey: true },
+                votedAt: { type: DataTypes.DATE, allowNull: false },
+            },
+            {
+                sequelize,
+                modelName: 'KythiaVoter',
+                tableName: 'kythia_voters',
+                timestamps: false,
+            }
+        );
+
+        return this;
+    }
+}
+
+// KythiaVoter.init(sequelize);
+
+module.exports = KythiaVoter;

@@ -1,0 +1,28 @@
+/**
+ * @namespace: addons/music/register.js
+ * @type: Module
+ * @copyright © 2025 LORD_RAJBHAI
+ * @assistant chaa & graa
+ * @version 0.9.11-beta
+ */
+
+const initializeMusicManager = require('./helpers/musicManager');
+
+module.exports = {
+    async initialize(bot) {
+        const summary = [];
+        await initializeMusicManager(bot);
+        summary.push('   └─ 🎵 Initialize Music Manager');
+        
+        bot.addDbReadyHook((sequelize) => {
+            const { Playlist, PlaylistTrack } = sequelize.models;
+
+            if (Playlist && PlaylistTrack) {
+                Playlist.hasMany(PlaylistTrack, { foreignKey: 'playlistId', as: 'tracks' });
+                PlaylistTrack.belongsTo(Playlist, { foreignKey: 'playlistId', as: 'playlist' });
+            }
+        });
+        summary.push('   └─ 🎵 Model associations registered.');
+        return summary;
+    },
+};
